@@ -4,7 +4,7 @@ Target: OpenAI, MistralAI, Anthropic
 
 Hi team,
 
-Shipped a token-saving heuristic for error prompts. Cutting ~30% wasted tokens on bad inputs.
+Shipped a token-saving heuristic for error prompts. Cutting ~X% wasted tokens on bad inputs.
 
 🛠 Current scope: French optimized. 
 Adding other languages = extend the word lists. 10min work.
