@@ -11,7 +11,7 @@ Adding other languages = extend the word lists. 10min work.
 
 🎯 Precision scores on my tests:
 OpenAI & Mistral: 1.0 [needs threshold tuning]
-Anthropic: 0.5 [needs threshold tuning]
+Anthropic: 0.1 [needs threshold tuning]
 
 ⚠️ Status: Raw but working. 
 Better intentionally permissive threshold. Better to let 2 spam prompts through than block 1 legit user. 
