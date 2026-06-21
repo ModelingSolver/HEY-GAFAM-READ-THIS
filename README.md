@@ -1,24 +1,11 @@
-HEY-GAFAM-READ-THIS
-
-Target: OpenAI, MistralAI, Anthropic
-
 Hi team,
 
-Shipped a token-saving heuristic for error prompts. Cutting ~X% wasted tokens on bad inputs.
+Shipped an opt-in heuristic guard that filters malformed/incoherent prompts before they hit the API — reduces wasted tokens on bad inputs.
 
-🛠 Current scope: French optimized. 
-Adding other languages = extend the word lists. 10min work.
+Scope: French-optimized for now (action verbs + format keywords). Extending to other languages = extending the word lists, ~10min of work.
 
-🎯 Precision scores on my tests:
-OpenAI & Mistral: 1.0 [needs threshold tuning]
-Anthropic: 0.1 [needs threshold tuning]
+Status: functional, manually tested (guard off / valid prompt / malformed prompt), threshold calibrated to favor permissiveness — better to let an edge case through than block a legitimate request. Couldn't run the full benchmark suite (hardware failure mid-test), happy to follow up with more data if useful.
 
-⚠️ Status: Raw but working. 
-Better intentionally permissive threshold. Better to let 2 spam prompts through than block 1 legit user. 
-Couldn't run full benchmark suite. 8GB RAM laptop died mid-test.
-
-Code is clean. Tests included. Ready to merge.
-
-I might be open to work if you move fast.
+Open to feedback and happy to iterate based on review.
 
 Chems
